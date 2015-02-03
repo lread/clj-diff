@@ -5,12 +5,14 @@
   :java-source-paths ["src/jvm"]
   :jar-exclusions [#"\.cljx|\.swp|\.swo|\.DS_Store"]
 
-  :dev-dependencies [[org.clojure/clojure "1.6.0"]
-                     [marginalia "0.8.0"]
-                     [lein-difftest "1.3.2-SNAPSHOT"]]
+  :test-paths ["test/clj_diff/test"]
 
   :prep-tasks [["cljx" "once"] "javac" "compile"]
-  :profiles {:dev {:plugins [[com.keminglabs/cljx "0.5.0"]]}}
+  :profiles {:dev {:plugins [[com.keminglabs/cljx "0.5.0"]
+                             [lein-difftest "2.0.0"]]
+                   :source-paths ["test"]
+                   :dependencies [[org.clojure/clojure "1.6.0"]
+                                  [marginalia "0.8.0"]]}}
   :cljx {:builds [{:source-paths ["src/cljx"]
                    :output-path "target/classes"
                    :rules :clj}
