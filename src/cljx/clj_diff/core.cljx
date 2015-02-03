@@ -49,13 +49,16 @@
   patch will use the edit script to transform a into b.
 
   (diff a b) -> x, (patch a x) -> b."
-  (fn [s _] (class s)))
+  #+clj
+  (fn [s _] (class s))
+  #+cljs
+  (fn [s _] (when (string? s) :string)))
 
 (defmethod patch :default
   [s edit-script]
   (patch* s edit-script))
 
-(defmethod patch String
+(defmethod patch #+clj String #+cljs :string
   [s edit-script]
   (apply str (patch* s edit-script)))
 

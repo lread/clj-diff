@@ -13,8 +13,7 @@
   :profiles {:dev {:plugins [[com.keminglabs/cljx "0.5.0"]
                              [lein-difftest "2.0.0"]]
                    :source-paths ["test"]
-                   :dependencies [
-                                  [marginalia "0.8.0"]]}
+                   :dependencies [[marginalia "0.8.0"]]}
              :clj {:source-paths ["src/clj" "target/generated/src/clj"]
                    :test-paths ["test/clj" "target/generated/test/clj"]}
              :cljs {:dependencies [[org.clojure/clojurescript "0.0-2760"]]
