@@ -5,13 +5,15 @@
   :java-source-paths ["src/jvm"]
   :jar-exclusions [#"\.cljx|\.swp|\.swo|\.DS_Store"]
   :test-paths ["test/clj_diff/test"]
-  :hooks [leiningen.cljsbuild]
+
   :prep-tasks [["cljx" "once"] "javac" "compile"]
+
+  :dependencies [[org.clojure/clojure "1.6.0"]]
 
   :profiles {:dev {:plugins [[com.keminglabs/cljx "0.5.0"]
                              [lein-difftest "2.0.0"]]
                    :source-paths ["test"]
-                   :dependencies [[org.clojure/clojure "1.6.0"]
+                   :dependencies [
                                   [marginalia "0.8.0"]]}
              :clj {:source-paths ["src/clj" "target/generated/src/clj"]
                    :test-paths ["test/clj" "target/generated/test/clj"]}
@@ -27,7 +29,7 @@
                      :compiler {:output-to "target/tests.js"
                                 :optimizations :simple
                                 :pretty-print true}}}
-              :test-commands {"test" ["node" "target/tests.js"]}}
+              :test-commands {"test" ["node" :node-runner "target/tests.js"]}}
 
   :cljx {:builds [{:source-paths ["src/cljx"]
                                  :output-path "target/generated/src/clj"
