@@ -1,6 +1,9 @@
 (ns clj-diff.test.core
   (:use [clj-diff.core] :reload)
-  (:use [clojure.test]))
+  #+cljs (:require-macros [cemerick.cljs.test
+                           :refer (is deftest with-test run-tests testing test-var)]
+  #+cljs (:use [cemerick.cljs.test])
+  #+clj (:use [clojure.test]))
 
 (deftest diff-test
   (let [t (fn [a b] (edit-distance (diff a b)))]
