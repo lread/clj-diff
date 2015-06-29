@@ -2,8 +2,8 @@
   #?(:cljs (:require-macros [cemerick.cljs.test :as t]))
   (:require [clj-diff.core :as core]
             [clj-diff.miller :as miller]
-            #?(:clj  [cemerick.cljs.test :as t]
-               :cljs [clojure.test :as t])))
+            #?(:cljs [cemerick.cljs.test :as t]
+               :clj  [clojure.test :as t])))
 
 (def a1 (vec (cons nil "acebdabbabed")))
 (def b1 (vec (cons nil "acbdeacbed")))
