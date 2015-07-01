@@ -1,8 +1,8 @@
 (ns clj-diff.test.miller
-  #?(:cljs (:require-macros [cemerick.cljs.test :as t]))
+  #?(:cljs (:require-macros [cljs.test :as t]))
   (:require [clj-diff.core :as core]
             [clj-diff.miller :as miller]
-            #?(:cljs [cemerick.cljs.test :as t]
+            #?(:cljs [cljs.test :as t]
                :clj  [clojure.test :as t])))
 
 (def a1 (vec (cons nil "acebdabbabed")))

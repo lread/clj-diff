@@ -3,8 +3,8 @@
                                levenshtein-distance longest-common-subseq)])
 
   #?@(:clj  [(:require [clojure.test :as t])]
-      :cljs [(:require [cemerick.cljs.test :as t])
-             (:require-macros [cemerick.cljs.test :as t])]))
+      :cljs [(:require [cljs.test :as t])
+             (:require-macros [cljs.test :as t])]))
 
 (t/deftest diff-test
   (let [t (fn [a b] (edit-distance (diff a b)))]
