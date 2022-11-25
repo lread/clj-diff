@@ -1,7 +1,7 @@
 # clj-diff
 
 <!-- badges -->
-[![cljdoc badge](https://cljdoc.org/badge/lambdaisland/clj-diff)](https://cljdoc.org/d/lambdaisland/clj-diff) [![Clojars Project](https://img.shields.io/clojars/v/lambdaisland/clj-diff.svg)](https://clojars.org/lambdaisland/clj-diff)
+[![cljdoc badge](https://cljdoc.org/badge/lambdaisland/clj-diff)](https://cljdoc.org/d/lambdaisland/clj-diff) [![Clojars Project](https://img.shields.io/clojars/v/lambdaisland/clj-diff.svg)](https://clojars.org/lambdaisland/clj-diff) [![bb compatible](https://raw.githubusercontent.com/babashka/babashka/master/logo/badge.svg)](https://babashka.org)
 <!-- /badges -->
 
 Diff and patch for Clojure sequences
